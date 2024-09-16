@@ -17,11 +17,11 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-<<<<<<< HEAD
         
         Hero hero = new Hero();
         addObject(hero, 100, 100);
-=======
->>>>>>> parent of 2817021 (Reapply "Add Banana")
+        
+        Banana banana = new Banana();
+        addObject(banana, 600, 100);
     }
 }
