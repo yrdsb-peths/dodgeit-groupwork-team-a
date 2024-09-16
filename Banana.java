@@ -29,6 +29,9 @@ public class Banana extends Actor
         }
     }
     
+    /* This method moves the banana back to the right side and
+     * randomly places it at the top or bottom of the world.
+     */
     public void resetBanana()
     {
         int num = Greenfoot.getRandomNumber(2);
