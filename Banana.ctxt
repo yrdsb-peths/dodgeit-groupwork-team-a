@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Banana
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Banana\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Power-up\ that\ halves\ the\ snake's\ speed\ and\ returns\ it\ back\ to\ the\ start\ when\ collected.\r\n\ \r\n\ @author\ Ethan\ \r\n\ @version\ 9/17/2024\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Banana\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=void\ resetBanana()
-comment2.text=\ This\ method\ moves\ the\ banana\ back\ to\ the\ right\ side\ and\r\n\ randomly\ places\ it\ at\ the\ top\ or\ bottom\ of\ the\ world.\r\n
-numComments=3
+comment2.target=void\ onCollide()
+comment3.params=
+comment3.target=void\ onReset()
+numComments=4

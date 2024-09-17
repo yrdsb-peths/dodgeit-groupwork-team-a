@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Snake
+comment0.text=\r\n\ Enemy\ you\ must\ avoid\ as\ the\ bear.\r\n\ \r\n\ @author\ Ethan\r\n\ @version\ 9/17/2024\r\n
+comment1.params=
+comment1.target=Snake()
+comment2.params=
+comment2.target=void\ onCollide()
+comment3.params=
+comment3.target=void\ onReset()
+numComments=4

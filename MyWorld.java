@@ -22,5 +22,10 @@ public class MyWorld extends World
 
         Banana banana = new Banana();
         addObject(banana, 600, 100);
+        banana.resetObject();
+        
+        Snake snake = new Snake();
+        addObject(snake, 600, 100);
+        snake.resetObject();
     }
 }

@@ -1,48 +1,38 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
- * Write a description of class Banana here.
+ * Power-up that halves the snake's speed and returns it back to the start when collected.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ethan 
+ * @version 9/17/2024
  */
-public class Banana extends Actor
+public class Banana extends LoopingObject
 {
-    int speed = -5;
+    int timerMax = 120 * 4;
+    int timer = timerMax;
+    int speed = -10;
     
-    /**
-     * Act - do whatever the Banana wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        move(speed);
-        
-        if (getX() <=0)
-        {
-            speed--;
-            resetBanana();
-        }
-        
-        if (isTouching(Hero.class))
-        {
-            sadFace sadFace = new sadFace();
-            getWorld().addObject(sadFace, 300, 200);
-            getWorld().removeObject(this);
-        }
+    public void act() {
+        if (timer <= 0)
+            doMovement();
+        else
+            timer--;
     }
     
-    /* This method moves the banana back to the right side and
-     * randomly places it at the top or bottom of the world.
-     */
-    public void resetBanana()
-    {
-        int num = Greenfoot.getRandomNumber(2);
-        if (num == 0)
-        {
-            setLocation (600,100);
-        } else {
-            setLocation (600, 300);
+    public void onCollide() {
+        World world = getWorld();
+        List<Snake> objs = world.getObjects(Snake.class);
+        
+        for (Snake s : objs) {
+            s.resetObject();
+            s.speed++;
+            s.speed /= 2;
         }
+        resetObject();
+    }
+    
+    public void onReset() {
+        timer = timerMax;
     }
 }

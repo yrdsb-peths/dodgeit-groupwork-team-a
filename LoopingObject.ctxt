@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=LoopingObject
+comment0.text=\r\n\ Parent\ for\ objects\ which\ wrap\ around\ the\ screen.\r\n\ \r\n\ @author\ Ethan\ \r\n\ @version\ 9/17/2024\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ doMovement()
+comment3.params=
+comment3.target=void\ resetObject()
+comment3.text=\ This\ method\ moves\ the\ object\ back\ to\ the\ right\ side\ and\r\n\ randomly\ places\ it\ at\ the\ top\ or\ bottom\ of\ the\ world.\r\n
+comment4.params=
+comment4.target=void\ onCollide()
+comment5.params=
+comment5.target=void\ onReset()
+numComments=6
