@@ -17,7 +17,7 @@ public class Banana extends Actor
     public void act()
     {
         move(speed);
-        
+        increaseScore();
         if (getX() <=0)
         {
             speed--;
@@ -30,6 +30,12 @@ public class Banana extends Actor
             getWorld().addObject(sadFace, 300, 200);
             getWorld().removeObject(this);
         }
+    }
+    
+    public void increaseScore()
+    {
+        MyWorld.score++;
+        MyWorld.scoreLabel.setValue(MyWorld.score);
     }
     
     /* This method moves the banana back to the right side and
