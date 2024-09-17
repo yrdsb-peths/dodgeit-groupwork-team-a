@@ -9,6 +9,8 @@
 public class Banana extends Actor
 {
     int speed = -5;
+    public static boolean gameOver = false;
+    static int objectRemoved = 0;
     
     /**
      * Act - do whatever the Banana wants to do. This method is called whenever
@@ -28,7 +30,19 @@ public class Banana extends Actor
         {
             sadFace sadFace = new sadFace();
             getWorld().addObject(sadFace, 300, 200);
+            gameOver = true;
+        }
+        
+        if(gameOver == true)
+        {
             getWorld().removeObject(this);
+            objectRemoved++;
+        }
+        
+        if(objectRemoved == 2)
+        {
+            objectRemoved = 0;
+            gameOver = false;
         }
     }
     
@@ -52,5 +66,10 @@ public class Banana extends Actor
                 break;
             }
         }
+    }
+    
+    public boolean isGameOver()
+    {
+        return gameOver;
     }
 }
