@@ -6,5 +6,5 @@ comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Banana\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ resetBanana()
-comment2.text=\ This\ method\ moves\ the\ banana\ back\ to\ the\ right\ side\ and\r\n\ randomly\ places\ it\ at\ the\ top\ or\ bottom\ of\ the\ world.\r\n
+comment2.text=\ This\ method\ moves\ the\ banana\ back\ to\ the\ right\ side\ and\r\n\ randomly\ places\ it\ at\ the\ top,\ middle\ or\ bottom\ of\ the\ world.\r\n
 numComments=3

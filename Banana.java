@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Banana here.
@@ -33,16 +33,24 @@ public class Banana extends Actor
     }
     
     /* This method moves the banana back to the right side and
-     * randomly places it at the top or bottom of the world.
+     * randomly places it at the top, middle or bottom of the world.
      */
     public void resetBanana()
     {
-        int num = Greenfoot.getRandomNumber(2);
-        if (num == 0)
-        {
-            setLocation (600,100);
-        } else {
-            setLocation (600, 300);
+        while(true){
+            int num = Greenfoot.getRandomNumber(3);
+            if (num == 0)
+            {
+                setLocation (600,50);
+            } else if(num == 1){
+                setLocation (600, 200);
+            }else{
+                setLocation(600, 350);
+            }
+            if(!isTouching(Banana.class))
+            {
+                break;
+            }
         }
     }
 }
