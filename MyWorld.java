@@ -24,7 +24,8 @@ public class MyWorld extends World
         Banana banana = new Banana();
         addObject(banana, 600, 100);
         
-        scoreLabel = new Label(0, 80);
+        scoreLabel = new Label(score, 80);
         addObject(scoreLabel, 50, 50);
+        score = 0;
     }
 }

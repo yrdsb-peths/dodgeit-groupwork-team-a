@@ -29,13 +29,8 @@ public class Banana extends Actor
             sadFace sadFace = new sadFace();
             getWorld().addObject(sadFace, 300, 200);
             getWorld().removeObject(this);
+            MyWorld.scoreLabel.setValue(MyWorld.score);
         }
-    }
-    
-    public void increaseScore()
-    {
-        MyWorld.score++;
-        MyWorld.scoreLabel.setValue(MyWorld.score);
     }
     
     /* This method moves the banana back to the right side and
@@ -49,6 +44,15 @@ public class Banana extends Actor
             setLocation (600,100);
         } else {
             setLocation (600, 300);
+        }
+    }
+    
+    
+       public void increaseScore()
+    {
+        if (!isTouching(Hero.class)){
+            MyWorld.score++;
+            MyWorld.scoreLabel.setValue(MyWorld.score);
         }
     }
 }

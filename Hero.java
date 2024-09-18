@@ -11,7 +11,7 @@ public class Hero extends Actor
     boolean isTop = true;
     boolean keyPressed = false;
     public void act()
-    {
+    {   
         if (Greenfoot.mouseClicked(null) || Greenfoot.isKeyDown("space") && !keyPressed){
             isTop = !isTop;
             keyPressed = true;
@@ -25,4 +25,5 @@ public class Hero extends Actor
         else
             setLocation(100, 300);
     }
+    
 }
